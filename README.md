@@ -23,6 +23,16 @@ Here's the report from a test tenant:
 
 ## Run it
 
+From the PowerShell Gallery:
+
+```powershell
+Install-Module Microsoft.Graph.Authentication -Scope CurrentUser
+Install-Script Invoke-M365QuickCheck -Scope CurrentUser
+Invoke-M365QuickCheck.ps1
+```
+
+Or download `Invoke-M365QuickCheck.ps1` from this repo and run:
+
 ```powershell
 Install-Module Microsoft.Graph.Authentication -Scope CurrentUser
 .\Invoke-M365QuickCheck.ps1
@@ -34,13 +44,17 @@ If Windows blocks the downloaded script: `Unblock-File .\Invoke-M365QuickCheck.p
 
 ## Permissions it asks for
 
-All read-only: `Policy.Read.All`, `Directory.Read.All`, `RoleManagement.Read.Directory`, `Organization.Read.All`, `SharePointTenantSettings.Read.All`. Read the script before you run it. It's about 230 lines.
+All read-only: `Policy.Read.All`, `Directory.Read.All`, `RoleManagement.Read.Directory`, `Organization.Read.All`, `SharePointTenantSettings.Read.All`. Read the script before you run it. It's about 260 lines.
 
 ## Want more?
 
 This is a cut-down version of the Quick Audit that ships with *Microsoft 365 Security: A Practical Small-Business Hardening Guide*. The full version adds about sixteen more checks, among them MFA registration gaps, SMS-only MFA, admins reading email on admin accounts, risky third-party apps, inbox rules that hide mail, external forwarding, audit logging, DKIM, SMTP AUTH, and stale licensed accounts. It also comes with a script that collects the evidence on a compromised account before anyone starts deleting things.
 
 [Book + Toolkit on Gumroad](https://radio1one.gumroad.com/l/qvoxbr)
+
+## How this was made
+
+Written with AI assistance, then reviewed and tested by me against a live Microsoft 365 tenant. Every Graph call is a GET, and it's short enough to read in one sitting, so please do read it before you run it.
 
 ## License
 

@@ -1,3 +1,37 @@
+<#PSScriptInfo
+
+.VERSION 1.0.1
+
+.GUID f07b2571-bfa1-4ce1-b021-8bd470192324
+
+.AUTHOR thecyberape
+
+.COMPANYNAME
+
+.COPYRIGHT (c) 2026 thecyberape. MIT License.
+
+.TAGS Microsoft365 M365 Office365 EntraID AzureAD Security Audit SecurityDefaults ConditionalAccess MFA Graph SMB
+
+.LICENSEURI https://github.com/thecyberape/m365-quick-check/blob/main/LICENSE
+
+.PROJECTURI https://github.com/thecyberape/m365-quick-check
+
+.ICONURI
+
+.EXTERNALMODULEDEPENDENCIES Microsoft.Graph.Authentication
+
+.REQUIREDSCRIPTS
+
+.EXTERNALSCRIPTDEPENDENCIES
+
+.RELEASENOTES
+1.0.1 - Added PowerShell Gallery metadata and AI-assistance disclosure. No functional changes.
+1.0.0 - Initial release: 8 read-only checks with an HTML report.
+
+.PRIVATEDATA
+
+#>
+
 <#
 .SYNOPSIS
     Free, read-only Microsoft 365 security quick check for small businesses.
@@ -30,6 +64,8 @@
 .NOTES
     Author:  thecyberape
     License: MIT
+    Written with AI assistance; reviewed and tested by the author against a
+    live Microsoft 365 tenant.
     Requires: Microsoft.Graph.Authentication module
       Install-Module Microsoft.Graph.Authentication -Scope CurrentUser
     Sign in as a Global Reader (recommended) or Global Administrator.
